@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daydream Pages – Save The Date</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Preconnect for faster font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A dreamy Save The Date website template for weddings and events. Elegant, mobile-friendly, and customizable." />
+  <meta name="author" content="Daydream Pages" />
+  <meta name="keywords" content="wedding, save the date, template, boho sunset, Daydream Pages" />
+</head>
+
+<body>
+  <!-- Fullscreen Background -->
+  <div id="background"></div>
+
+  <!-- Optional Page Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Main Save The Date Section -->
+  <div class="container fade-in">
+    <h1>Save The Date</h1>
+    <p class="names">Sophia & James</p>
+    <p class="date">May 15, 2025</p>
+    <img src="assets/main-couple-photo.jpg" alt="Couple Photo" class="photo">
+    <div id="countdown"></div>
+    <p class="location">Coastal Palms Resort</p>
+  </div>
+
+  <!-- RSVP Section -->
+  <div class="container fade-in">
+    <h1>RSVP</h1>
+    <p class="names">We can't wait to celebrate with you!</p>
+    <a href="https://tinyurl.com/RSVP-Daydream" class="rsvp-button" target="_blank">Join the Celebration!</a>
+    <p class="location" style="margin-top: 20px;">Kindly reply by May 15</p>
+  </div>
+
+  <!-- Memories Gallery Section -->
+  <div class="container fade-in">
+    <h1>Our Memories</h1>
+    <div class="gallery">
+      <a href="assets/memory-1.jpg" data-lightbox="wedding-gallery" data-title="Memory 1">
+        <img src="assets/memory-1.jpg" alt="Memory 1">
+      </a>
+      <a href="assets/memory-2.jpg" data-lightbox="wedding-gallery" data-title="Memory 2">
+        <img src="assets/memory-2.jpg" alt="Memory 2">
+      </a>
+      <a href="assets/memory-3.jpg" data-lightbox="wedding-gallery" data-title="Memory 3">
+        <img src="assets/memory-3.jpg" alt="Memory 3">
+      </a>
+    </div>
+  </div>
+
+  <!-- Countdown Timer Script -->
+  <script>
+    var countDownDate = new Date("Sep 20, 2025 00:00:00").getTime();
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Today is the day!";
+      }
+    }, 1000);
+  </script>
+
+  <!-- Background Slideshow Script -->
+  <script>
+    window.addEventListener('load', function () {
+      const backgrounds = [
+        'assets/sunset-background-1.jpg',
+        '#FF7F50',
+        'assets/terracotta-canvas.jpg',
+        '#FFF5E1',
+        'assets/sunset-background-2.jpg',
+        '#708D81',
+        'assets/sand-canvas.jpg',
+        '#2F3E46',
+        'assets/sunset-background-3.jpg',
+        '#FFEDE1',
+        'assets/sunset-background-4.jpg',
+        'assets/sunset-background-5.jpg'
+      ];
+
+      let current = 0;
+      const backgroundDiv = document.getElementById('background');
+
+      function changeBackground() {
+        backgroundDiv.style.transition = "opacity 3s ease-in-out";
+        backgroundDiv.style.opacity = 0;
+        setTimeout(() => {
+          const bg = backgrounds[current];
+          if (bg.startsWith('#')) {
+            backgroundDiv.style.backgroundImage = 'none';
+            backgroundDiv.style.backgroundColor = bg;
+            backgroundDiv.style.animation = "pulse 5s ease-in-out infinite";
+          } else {
+            backgroundDiv.style.backgroundImage = `url('${bg}')`;
+            backgroundDiv.style.backgroundColor = 'transparent';
+            backgroundDiv.style.animation = "none";
+          }
+          backgroundDiv.style.opacity = 1;
+          current = (current + 1) % backgrounds.length;
+        }, 2000);
+      }
+
+      // First Background
+      changeBackground();
+
+      // Change Background Every 10 Seconds
+      setInterval(changeBackground, 10000);
+
+      // Loader Fade Out
+      const loader = document.getElementById('loader');
+      loader.style.opacity = '0';
+      setTimeout(function () {
+        loader.style.display = 'none';
+      }, 500);
+    });
+  </script>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+</body>
+
+</html>

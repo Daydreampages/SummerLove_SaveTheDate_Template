@@ -1,0 +1,14 @@
+MIT License
+
+Copyright (c) 2024 Daydream Studios
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this template and associated files, to deal in the template without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute,
+and/or sell copies of the template, subject to the following conditions:
+
+- You may not claim the template as your own original creation.
+- Attribution to "Daydream Studios" must be maintained in the README or listing.
+- For commercial use, redistribution as part of a marketplace listing (e.g. Etsy), you must include this license file.
+
+THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
