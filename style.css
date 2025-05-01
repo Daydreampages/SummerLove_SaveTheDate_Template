@@ -153,6 +153,7 @@ p {
     font-size: 2.5rem;
   }
 
+
   p {
     font-size: 1.3rem;
   }
@@ -165,4 +166,8 @@ p {
     max-width: 140px;
     height: 100px;
   }
+}
+footer {
+  background-color: #2F3E46;
+  color: #FFF5E1;
 }
