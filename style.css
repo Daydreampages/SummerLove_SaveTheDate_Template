@@ -38,7 +38,7 @@ body {
 
 /* Main Content Container */
 .container {
-  background-color: rgba(255, 245, 225, 0.4);
+  background-color: rgba(255, 245, 225, 0.2);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
