@@ -90,21 +90,20 @@
     }, 1000);
   </script>
 
-  <!-- Background Slideshow Script -->
-<script>
+  <!-- Background Slideshow Script --><script>
   window.addEventListener('load', function () {
     const backgrounds = [
       'assets/sunset-background-1.jpg',
-      '#FF7F50', // Soft coral
+      '#FF7F50',
       'assets/coral-canvas.jpg',
-      '#FFF5E1', // Ivory tint
+      '#FFF5E1',
       'assets/sunset-background-2.jpg',
-      '#708D81', // Olive green
+      '#708D81',
       'assets/olive-canvas.jpg',
-      '#2F3E46', // Slate navy
+      '#2F3E46',
       'assets/sunset-background-3.jpg',
       'assets/peach-canvas.jpg',
-      '#FFEDE1', // Champagne blush
+      '#FFEDE1',
       'assets/sunset-background-4.jpg',
       'assets/sunset-background-5.jpg'
     ];
@@ -130,26 +129,20 @@
         current = (current + 1) % backgrounds.length;
       }, 2000);
     }
-    {
-    changeBackground(); // Start first
-    setInterval(changeBackground, 10000); // Change every 10 sec });
-    }
+
+    // Start slideshow
+    changeBackground();
+    setInterval(changeBackground, 10000);
+
+    // Loader fade out
+    const loader = document.getElementById('loader');
+    loader.style.opacity = '0';
+    setTimeout(function () {
+      loader.style.display = 'none';
+    }, 500);
+  });
 </script>
 
-      // First Background
-      changeBackground();
-
-      // Change Background Every 10 Seconds
-      setInterval(changeBackground, 10000);
-
-      // Loader Fade Out
-      const loader = document.getElementById('loader');
-      loader.style.opacity = '0';
-      setTimeout(function () {
-        loader.style.display = 'none';
-      }, 500);
-    });
-  </script>
 
   <!-- Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
