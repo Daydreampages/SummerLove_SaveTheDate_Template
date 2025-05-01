@@ -11,7 +11,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #FFF9F3;
+  background-color: #FFF5E1;
   z-index: -1;
   opacity: 1;
   transition: opacity 3s ease-in-out;
@@ -23,8 +23,8 @@ body {
   background: url('assets/background.jpg') repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #2F3E46;
-  color: #FFFE51;
+  background-color:  #FFF5E1;
+  color: #2F3E46;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -38,7 +38,7 @@ body {
 
 /* Main Content Container */
 .container {
-  background-color: rgba(255, 127, 80, 0.08);
+  background-color: rgba(255, 245, 225, 0.9);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -49,8 +49,8 @@ body {
   display: inline-block;
   margin-top: 20px;
   padding: 15px 30px;
-  background-color: #2F3E46;
-  color: #FFF;
+  background-color: #FF7F50;
+  color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 1.2em;
   border: none;
@@ -73,12 +73,12 @@ h1, h2, h3 {
 h1 {
   font-size: 4rem;
   margin-bottom: 0.5em;
-  color: #E2725B;
+  color: #708D81;
 }
 
 h2, h3 {
   font-size: 2.5rem;
-  color: #E2725B;
+  color:#708D81;
 }
 
 /* Paragraphs */
